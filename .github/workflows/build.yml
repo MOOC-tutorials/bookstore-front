@@ -18,12 +18,14 @@ jobs:
       with:
         node-version: 16
     - name: Install dependencies
-      run: npm install
+      run: |
+        npm install
+        npm ci
 
     - name: Build
       run: npm run build
     - name: Run tests
-      run: ng test --watch=false --code-coverage true
+      run: npm run test:prod
 
     - name: SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@master

@@ -11,7 +11,9 @@
     "sonar": "sonar-scanner",
     "e2e": "ng e2e",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+    "build:prod": "ng build --prod",
+    "test:prod": " ng test --watch=false --code-coverage true"
   },
   "private": true,
   "dependencies": {
