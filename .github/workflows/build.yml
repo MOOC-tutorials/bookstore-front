@@ -22,6 +22,8 @@ jobs:
 
     - name: Build
       run: npm run build
+    - name: Run tests
+      run: ng test --watch=false --code-coverage true
 
     - name: SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@master
